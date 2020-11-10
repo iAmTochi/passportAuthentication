@@ -53,11 +53,14 @@ class AuthController extends Controller
      * @param [string] expires_at
      */
     public function login(Request $request){
-        $request->validate([
+
+        $rules = [
             'email'=> 'required|string|email',
             'password' => 'required|string',
             'remember_me' => 'boolean'
-        ]);
+        ];
+
+        $this->validate($request,$rules);
 
         $credentials = request(['email', 'password']);
 
@@ -82,7 +85,7 @@ class AuthController extends Controller
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
-        ],200);
+        ]);
     }
 
 
@@ -109,5 +112,10 @@ class AuthController extends Controller
     public function user(Request $request){
 
         return response()->json($request->user());
+    }
+
+    public function users(){
+
+        return response()->json(User::all());
     }
 }
