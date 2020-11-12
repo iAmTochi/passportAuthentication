@@ -4,6 +4,7 @@
 namespace App\Traits;
 
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
 trait ApiResponser
@@ -28,5 +29,10 @@ trait ApiResponser
         }
 
         return $this->successResponse($collection, $code);
+    }
+    
+    protected function showOne(Model $instance, $code = 200){
+
+        return $this->successResponse($instance, $code);
     }
 }

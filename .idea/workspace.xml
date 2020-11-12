@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e08e72d-3674-4176-a8e0-b77e816c7c67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponser.php" afterDir="false" />
-    </list>
+    <list default="true" id="4e08e72d-3674-4176-a8e0-b77e816c7c67" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605029083838</updated>
       <workItem from="1605029104577" duration="8008000" />
-      <workItem from="1605219413414" duration="823000" />
+      <workItem from="1605219413414" duration="1289000" />
     </task>
     <servers />
   </component>
@@ -178,6 +175,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="210" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605220527919">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="210" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1605220527919" />
     <state x="223" y="303" key="NewPhpClassDialog" timestamp="1605219606603">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
