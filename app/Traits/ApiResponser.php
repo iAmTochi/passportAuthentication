@@ -21,5 +21,12 @@ trait ApiResponser
         ], $code);
     }
 
-   
+    protected function showAll(Collection $collection, $code = 200){
+
+        if($collection->isEmpty()){
+            return $this->successResponse(['data'=> $collection], $code);
+        }
+
+        return $this->successResponse($collection, $code);
+    }
 }
