@@ -38,7 +38,7 @@ class AuthController extends ApiController
         $user->save();
 
         return response()->json([
-            'message' => 'Successfully created user!'
+            'message' => $user->name.', your account has been created successfully!'
         ], 201);
     }
 

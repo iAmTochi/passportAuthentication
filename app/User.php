@@ -71,7 +71,7 @@ class User extends Authenticatable
      * @return string
      */
     public function getEmailAttribute($email){
-        return ucwords($email);
+        return strtolower($email);
     }
 
     /**
