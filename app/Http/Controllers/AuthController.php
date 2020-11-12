@@ -121,4 +121,28 @@ class AuthController extends ApiController
         $users = User::all();
         return $this->showAll($users);
     }
+
+    public function createAnotherUser(Request $request){
+
+        $rules = [
+            'name' => 'required|string',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|string|confirmed',
+        ];
+
+        $this->validate($request,$rules);
+
+        $user = new User([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'created_by' => $request->user()->id
+        ]);
+
+        $user->save();
+
+        return response()->json([
+            'message' => $user->name.', your account has been created successfully!'
+        ], 201);
+    }
 }

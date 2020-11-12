@@ -27,6 +27,7 @@ Route::group(['prefix' => 'auth'], function (){
        Route::get('logout','AuthController@logout');
        Route::get('user','AuthController@user');
        Route::get('users', 'AuthController@users');
+       Route::post('create-users', 'AuthController@createAnotherUser');
     });
 });
 
