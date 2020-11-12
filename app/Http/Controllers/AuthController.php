@@ -65,9 +65,7 @@ class AuthController extends ApiController
         $credentials = request(['email', 'password']);
 
         if(!Auth::attempt($credentials)){
-            return response()->json([
-                'message' => 'Unauthorized'
-            ], 401);
+            return $this->showMessage('Unauthorized', 401);
         }
 
         $user = $request->user();
@@ -82,6 +80,7 @@ class AuthController extends ApiController
         $token->save();
 
         return response()->json([
+//            'data' => $user,
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
@@ -97,9 +96,11 @@ class AuthController extends ApiController
     public function logout(Request $request){
         $request->user()->token()->revoke();
 
-        return response()->json([
-            'message' => 'Successfully logged out'
-        ]);
+        return $this->showMessage('successfully logged out');
+
+//        return response()->json([
+//            'message' => 'Successfully logged out'
+//        ]);
 
     }
 
